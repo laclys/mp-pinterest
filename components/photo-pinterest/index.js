@@ -1,4 +1,9 @@
-// components/photo-pinterest/index.js
+/*
+ * @Author: Lac 
+ * @Date: 2018-08-20 15:09:37 
+ * @Last Modified by:   Lac 
+ * @Last Modified time: 2018-08-20 15:09:37 
+ */
 
 Component({
   /**

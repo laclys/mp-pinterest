@@ -2,9 +2,9 @@
  * @Author: Lac 
  * @Date: 2018-08-20 12:30:10 
  * @Last Modified by: Lac
- * @Last Modified time: 2018-08-20 15:07:11
+ * @Last Modified time: 2018-08-20 15:09:53
  */
-// pages/index.js
+
 import {
   data,
   title
@@ -86,7 +86,7 @@ Page({
    * 下拉回调
    */
   lower: function () {
-
+    console.log('do something~')
   },
 
   _getData: function () {
@@ -127,11 +127,14 @@ Page({
           let minBoxIndex = heightArr.indexOf(minBoxHeight)
           list[i].position = 'absolute'
           list[i].top = `${minBoxHeight}rpx`
-          list[i].left = minBoxIndex == 0 ? minBoxIndex * imgWidth + 'rpx' : minBoxIndex * imgWidth + gap * minBoxIndex  + 'rpx'
+          list[i].left = minBoxIndex == 0 ? minBoxIndex * imgWidth + 'rpx' : minBoxIndex * imgWidth + gap * minBoxIndex + 'rpx'
           heightArr[minBoxIndex] += (boxHeight + gap)
         }
       }
-      resolve({list, heightArr})
+      resolve({
+        list,
+        heightArr
+      })
     })
   }
 })
