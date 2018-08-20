@@ -2,7 +2,7 @@
  * @Author: Lac 
  * @Date: 2018-08-20 12:30:10 
  * @Last Modified by: Lac
- * @Last Modified time: 2018-08-20 15:09:53
+ * @Last Modified time: 2018-08-20 15:10:48
  */
 
 import {
@@ -21,7 +21,7 @@ Page({
     status: 'DEFAULT',
     heightArr: [],
     errorMessage: 'Error',
-    cols: 3
+    cols: 2
   },
 
   /**
