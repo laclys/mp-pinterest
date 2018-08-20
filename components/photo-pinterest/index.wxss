@@ -5,7 +5,6 @@
 }
 
 .container .pic {
-  width: 165px;
   display: inline-block;
 }
 

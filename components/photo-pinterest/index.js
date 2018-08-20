@@ -9,7 +9,8 @@ Component({
       type: Array,
       value: [],
       observer: '_handlePhotosArr'
-    }
+    },
+    cols: Number
   },
   /**
    * 组件的初始数据

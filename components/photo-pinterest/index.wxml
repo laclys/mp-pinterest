@@ -1,3 +1,14 @@
+<wxs module="helper" >
+  var clacWidth = function (cols) {
+    var gap = 30
+    return (750 - gap * 2 - gap * (cols - 1)) / cols + 'rpx'
+  }
+
+  module.exports = {
+    clacWidth: clacWidth
+  }
+</wxs>
+
 <view class="container" >
   <view class="pic"
     lazy-load
@@ -6,7 +17,7 @@
     wx:key="{{item.index}}"
     data-photos = "{{ previewPhotos }}"
     data-currentPhoto = "{{ item.photo.large_url }}"
-    style="left:{{item.left}}; top:{{item.top}}; position:{{item.position}}"
+    style="left:{{ item.left }}; top:{{ item.top }}; position:{{ item.position }}; width:{{ helper.clacWidth(cols) }}; "
   >
     <image src="{{ item.photo.small_url }}" mode="widthFix" ></image>
   </view>

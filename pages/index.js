@@ -2,7 +2,7 @@
  * @Author: Lac 
  * @Date: 2018-08-20 12:30:10 
  * @Last Modified by: Lac
- * @Last Modified time: 2018-08-20 14:41:06
+ * @Last Modified time: 2018-08-20 15:07:11
  */
 // pages/index.js
 import {
@@ -20,7 +20,8 @@ Page({
     title: '',
     status: 'DEFAULT',
     heightArr: [],
-    errorMessage: 'Error'
+    errorMessage: 'Error',
+    cols: 3
   },
 
   /**
@@ -93,9 +94,8 @@ Page({
       title,
       status: 'PENDING'
     })
-    this._handleData(data, 2)
+    this._handleData(data, this.data.cols)
       .then(res => {
-        console.log(res.list)
         this.setData({
           photos: res.list,
           heightArr: res.heightArr,
@@ -121,13 +121,13 @@ Page({
           heightArr.push(boxHeight + gap)
           list[i].position = 'absolute'
           list[i].top = `0`
-          list[i].left = i == 0 ? i * imgWidth + 'rpx' : i * imgWidth + gap + 'rpx'
+          list[i].left = i == 0 ? i * imgWidth + 'rpx' : i * imgWidth + gap * i + 'rpx'
         } else {
           let minBoxHeight = Math.min.apply(null, heightArr);
           let minBoxIndex = heightArr.indexOf(minBoxHeight)
           list[i].position = 'absolute'
           list[i].top = `${minBoxHeight}rpx`
-          list[i].left = minBoxIndex == 0 ? minBoxIndex * imgWidth + 'rpx' : minBoxIndex * imgWidth + gap + 'rpx'
+          list[i].left = minBoxIndex == 0 ? minBoxIndex * imgWidth + 'rpx' : minBoxIndex * imgWidth + gap * minBoxIndex  + 'rpx'
           heightArr[minBoxIndex] += (boxHeight + gap)
         }
       }
