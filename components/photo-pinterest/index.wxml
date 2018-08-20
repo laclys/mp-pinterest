@@ -1,0 +1,13 @@
+<view class="container" >
+  <view class="pic"
+    lazy-load
+    bind:tap="handleTap"
+    wx:for="{{ photos }}"
+    wx:key="{{item.index}}"
+    data-photos = "{{ previewPhotos }}"
+    data-currentPhoto = "{{ item.photo.large_url }}"
+    style="left:{{item.left}}; top:{{item.top}}; position:{{item.position}}"
+  >
+    <image src="{{ item.photo.small_url }}" mode="widthFix" ></image>
+  </view>
+</view>

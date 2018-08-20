@@ -1,0 +1,22 @@
+/* components/skeleton/index.wxss */
+.skeleton-card {
+  overflow: hidden;
+  margin-bottom: 60rpx; }
+
+.skeleton-card.align-left {
+  text-align: left; }
+
+.skeleton-card.align-right {
+  text-align: right; }
+
+.skeleton-card.align-left .skeleton-cover {
+  float: left; }
+
+.skeleton-card.align-right .skeleton-cover {
+  float: right; }
+
+.skeleton-stroke {
+  margin: 0 20rpx 20rpx 0rpx; }
+
+.skeleton-stroke:last-child {
+  margin-bottom: 0 !important; }

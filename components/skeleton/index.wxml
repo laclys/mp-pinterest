@@ -1,0 +1,22 @@
+<!--components/skeleton/index.wxml-->
+
+<wxs module="genRandomWidth">
+  var genRandomWidth = function(start, end) {
+    return Math.floor(Math.random() * (end - start) + start) + '%'
+  }
+  module.exports = genRandomWidth
+</wxs>
+
+<view class="skeleton-wrapper" style="background-color: {{ backgroundColor }};">
+  <block wx:for="{{ tempCardList }}" wx:for-item="card" wx:key="index">
+    <view class="skeleton-card {{ cover ? 'has-cover': '' }} align-{{ coverPosition }}" style="{{ cardStyle }}">
+      <view wx:if="{{ cover }}" class="skeleton-cover" style="width: {{ coverSize }}rpx; height: {{ coverSize }}rpx; background-color: {{ color }};"></view>
+
+      <view class="skeleton-strokes" style="{{ cover && coverPosition === 'left' ? 'margin-left: ' + (coverSize + 20) + 'rpx' : cover && coverPosition === 'right' ? 'margin-right: ' + (coverSize + 20) + 'rpx' : '' }}">
+        <block wx:for="{{ strokeList }}" wx:for-item="stroke" wx:key="stroke_index">
+          <view class="skeleton-stroke" style="background-color: {{ color }}; height: {{ strokeSize }}rpx; width: {{ genRandomWidth(40, 90) }}"></view>
+        </block>
+      </view>
+    </view>
+  </block>
+</view>

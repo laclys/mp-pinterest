@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "",
+  "usingComponents": {
+    "skeleton": "/components/skeleton/index",
+    "photo-pinterest": "/components/photo-pinterest/index"
+  }
+}
