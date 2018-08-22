@@ -5,14 +5,14 @@
 
 - 两列
 
-![](./pics/pic01.png)
+![](./pics/pic01.jpg)
 
 - 三列
 
-![](./pics/pic02.png)
+![](./pics/pic02.jpg)
 
 - preview
 
-![](./pics/pic03.png)
+![](./pics/pic03.jpg)
 
 just for fun~🤘
